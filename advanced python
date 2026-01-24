@@ -1,0 +1,198 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMvfbA4HvERG2a57c6Fg1V/",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/MeghaPatil2005/-self-portpolio/blob/main/advanced%20python\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tF6ILbaUq3Ua",
+        "outputId": "73883eef-e820-440c-da12-b9f3a3f0b345"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello, I am a student\n"
+          ]
+        }
+      ],
+      "source": [
+        "class Student:\n",
+        "    def display(self):\n",
+        "        print(\"Hello, I am a student\")\n",
+        "\n",
+        "s1 = Student()\n",
+        "s1.display()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Student:\n",
+        "    def __init__(self, name, age):\n",
+        "        self.name = name\n",
+        "        self.age = age\n",
+        "\n",
+        "    def show(self):\n",
+        "        print(\"Name:\", self.name)\n",
+        "        print(\"Age:\", self.age)\n",
+        "\n",
+        "s1 = Student(\"Megha\", 21)\n",
+        "s1.show()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3rZ7Th_8rGvf",
+        "outputId": "4cd926d9-fa60-4827-f7a7-0dc7787d8873"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Name: Ravi\n",
+            "Age: 21\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Parent:\n",
+        "    def show_parent(self):\n",
+        "        print(\"This is Parent class\")\n",
+        "\n",
+        "class Child(Parent):\n",
+        "    def show_child(self):\n",
+        "        print(\"This is Child class\")\n",
+        "\n",
+        "c = Child()\n",
+        "c.show_parent()\n",
+        "c.show_child()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gYv4_kQtrOjQ",
+        "outputId": "358762cf-e1dc-4acd-dbc4-866703e58936"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "This is Parent class\n",
+            "This is Child class\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Grandparent:\n",
+        "    def show_grandparent(self):\n",
+        "        print(\"Grandparent class\")\n",
+        "\n",
+        "class Parent(Grandparent):\n",
+        "    def show_parent(self):\n",
+        "        print(\"Parent class\")\n",
+        "\n",
+        "class Child(Parent):\n",
+        "    def show_child(self):\n",
+        "        print(\"Child class\")\n",
+        "\n",
+        "obj = Child()\n",
+        "obj.show_grandparent()\n",
+        "obj.show_parent()\n",
+        "obj.show_child()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xmO5uDL4rgIm",
+        "outputId": "f58e92cd-2fef-4e6b-ce63-cd1bd7aa7682"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Grandparent class\n",
+            "Parent class\n",
+            "Child class\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Parent:\n",
+        "    def show(self):\n",
+        "        print(\"Parent method\")\n",
+        "\n",
+        "class Child(Parent):\n",
+        "    def show(self):\n",
+        "        print(\"Child method\")\n",
+        "\n",
+        "obj = Child()\n",
+        "obj.show()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bjOINqNqr2a4",
+        "outputId": "0805249d-b915-44c6-cdef-517fc2d2325a"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Child method\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
